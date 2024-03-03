@@ -36,7 +36,7 @@ final class MainViewController: UIViewController {
     
     private func setupNavigation() {
         title = "메모"
-        let setting = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: nil)
+        let setting = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(settingButtonTapped))
         navigationItem.rightBarButtonItem = setting
         navigationController?.navigationBar.tintColor = .black
     }
@@ -54,6 +54,11 @@ final class MainViewController: UIViewController {
             make.height.equalTo(200)
         }
         setupTableView()
+    }
+    
+    @objc private func settingButtonTapped() {
+        let settingViewController = SettingViewController()
+        self.navigationController?.pushViewController(settingViewController, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

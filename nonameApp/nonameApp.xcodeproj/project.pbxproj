@@ -20,7 +20,24 @@
 		108279422B876E2100181DF6 /* TagListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108279412B876E2100181DF6 /* TagListCell.swift */; };
 		108BD6812B937147002EBC76 /* CustomKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6802B937147002EBC76 /* CustomKeyboardViewController.swift */; };
 		108BD6832B9460C3002EBC76 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6822B9460C3002EBC76 /* TagCell.swift */; };
+		108BD6852B946A27002EBC76 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6842B946A27002EBC76 /* SettingViewController.swift */; };
+		108BD6872B946B7F002EBC76 /* DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6862B946B7F002EBC76 /* DefaultCell.swift */; };
+		108BD6892B946E24002EBC76 /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6882B946E24002EBC76 /* OpenSourceViewController.swift */; };
+		108BD68B2B946E70002EBC76 /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD68A2B946E70002EBC76 /* OpenSource.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		108BD68D2B9474CA002EBC76 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		103DE62C2B87323B008F0B8A /* nonameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nonameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +53,10 @@
 		108279412B876E2100181DF6 /* TagListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListCell.swift; sourceTree = "<group>"; };
 		108BD6802B937147002EBC76 /* CustomKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardViewController.swift; sourceTree = "<group>"; };
 		108BD6822B9460C3002EBC76 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		108BD6842B946A27002EBC76 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		108BD6862B946B7F002EBC76 /* DefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCell.swift; sourceTree = "<group>"; };
+		108BD6882B946E24002EBC76 /* OpenSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
+		108BD68A2B946E70002EBC76 /* OpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				103DE64B2B873C00008F0B8A /* Memo.swift */,
+				108BD68A2B946E70002EBC76 /* OpenSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +117,8 @@
 			children = (
 				103DE6332B87323B008F0B8A /* MainViewController.swift */,
 				108BD6802B937147002EBC76 /* CustomKeyboardViewController.swift */,
+				108BD6842B946A27002EBC76 /* SettingViewController.swift */,
+				108BD6882B946E24002EBC76 /* OpenSourceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +130,7 @@
 				103DE64D2B874016008F0B8A /* MemoContentCell.swift */,
 				108279412B876E2100181DF6 /* TagListCell.swift */,
 				108BD6822B9460C3002EBC76 /* TagCell.swift */,
+				108BD6862B946B7F002EBC76 /* DefaultCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +145,7 @@
 				103DE6282B87323B008F0B8A /* Sources */,
 				103DE6292B87323B008F0B8A /* Frameworks */,
 				103DE62A2B87323B008F0B8A /* Resources */,
+				108BD68D2B9474CA002EBC76 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,7 +218,11 @@
 				103DE6342B87323B008F0B8A /* MainViewController.swift in Sources */,
 				103DE64E2B874016008F0B8A /* MemoContentCell.swift in Sources */,
 				108279422B876E2100181DF6 /* TagListCell.swift in Sources */,
+				108BD6872B946B7F002EBC76 /* DefaultCell.swift in Sources */,
 				103DE6302B87323B008F0B8A /* AppDelegate.swift in Sources */,
+				108BD68B2B946E70002EBC76 /* OpenSource.swift in Sources */,
+				108BD6892B946E24002EBC76 /* OpenSourceViewController.swift in Sources */,
+				108BD6852B946A27002EBC76 /* SettingViewController.swift in Sources */,
 				108BD6832B9460C3002EBC76 /* TagCell.swift in Sources */,
 				103DE6322B87323B008F0B8A /* SceneDelegate.swift in Sources */,
 				103DE64C2B873C00008F0B8A /* Memo.swift in Sources */,
@@ -347,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ4858BW64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = nonameApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
@@ -361,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeji.nonameApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeji.noname;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -379,6 +410,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ4858BW64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = nonameApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
@@ -393,7 +425,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeji.nonameApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeji.noname;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
