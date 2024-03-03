@@ -22,6 +22,16 @@ final class MainViewController: UIViewController {
         
         setupNavigation()
         setupView()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        touchUpKeyboardView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func viewTapped() {
+        let viewController = CustomKeyboardViewController()
+        viewController.modalTransitionStyle = .crossDissolve
+        viewController.modalPresentationStyle = .overFullScreen
+        self.present(viewController, animated: true)
     }
     
     private func setupNavigation() {

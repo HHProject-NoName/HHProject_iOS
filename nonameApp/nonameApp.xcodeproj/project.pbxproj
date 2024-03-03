@@ -18,6 +18,8 @@
 		103DE64C2B873C00008F0B8A /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DE64B2B873C00008F0B8A /* Memo.swift */; };
 		103DE64E2B874016008F0B8A /* MemoContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DE64D2B874016008F0B8A /* MemoContentCell.swift */; };
 		108279422B876E2100181DF6 /* TagListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108279412B876E2100181DF6 /* TagListCell.swift */; };
+		108BD6812B937147002EBC76 /* CustomKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6802B937147002EBC76 /* CustomKeyboardViewController.swift */; };
+		108BD6832B9460C3002EBC76 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108BD6822B9460C3002EBC76 /* TagCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		103DE64B2B873C00008F0B8A /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		103DE64D2B874016008F0B8A /* MemoContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoContentCell.swift; sourceTree = "<group>"; };
 		108279412B876E2100181DF6 /* TagListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListCell.swift; sourceTree = "<group>"; };
+		108BD6802B937147002EBC76 /* CustomKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardViewController.swift; sourceTree = "<group>"; };
+		108BD6822B9460C3002EBC76 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				103DE6332B87323B008F0B8A /* MainViewController.swift */,
+				108BD6802B937147002EBC76 /* CustomKeyboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				103DE6352B87323B008F0B8A /* Main.storyboard */,
 				103DE64D2B874016008F0B8A /* MemoContentCell.swift */,
 				108279412B876E2100181DF6 /* TagListCell.swift */,
+				108BD6822B9460C3002EBC76 /* TagCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,10 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108BD6812B937147002EBC76 /* CustomKeyboardViewController.swift in Sources */,
 				103DE6342B87323B008F0B8A /* MainViewController.swift in Sources */,
 				103DE64E2B874016008F0B8A /* MemoContentCell.swift in Sources */,
 				108279422B876E2100181DF6 /* TagListCell.swift in Sources */,
 				103DE6302B87323B008F0B8A /* AppDelegate.swift in Sources */,
+				108BD6832B9460C3002EBC76 /* TagCell.swift in Sources */,
 				103DE6322B87323B008F0B8A /* SceneDelegate.swift in Sources */,
 				103DE64C2B873C00008F0B8A /* Memo.swift in Sources */,
 			);
