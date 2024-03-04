@@ -13,7 +13,6 @@ final class MainViewController: UIViewController {
     private var tableView: UITableView = UITableView()
     private let touchUpKeyboardView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemYellow
         return view
     }()
 
@@ -51,7 +50,7 @@ final class MainViewController: UIViewController {
             make.top.equalTo(tableView.snp.bottom)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.height.equalTo(200)
+            make.height.equalTo(150)
         }
         setupTableView()
     }
