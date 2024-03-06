@@ -67,6 +67,7 @@ final class MainViewController: UIViewController {
     
     private func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.allowsMultipleSelection = true
         tableView.register(MemoContentCell.self, forCellReuseIdentifier: MemoContentCell.identifier)
     }
@@ -77,7 +78,7 @@ final class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10
@@ -101,6 +102,11 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "2024년 2월 \(20 - section)일"
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
