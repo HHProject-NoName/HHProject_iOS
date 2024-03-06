@@ -66,6 +66,7 @@ final class MainViewController: UIViewController {
     
     private func setupTableView() {
         tableView.dataSource = self
+        tableView.allowsMultipleSelection = true
         tableView.register(MemoContentCell.self, forCellReuseIdentifier: MemoContentCell.identifier)
     }
 }
@@ -84,6 +85,7 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MemoContentCell.identifier, for: indexPath) as! MemoContentCell
         cell.contentLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         cell.selectionStyle = .none
+        cell.delegate = self
         return cell
     }
     
@@ -93,5 +95,16 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "2024년 2월 \(20 - section)일"
+    }
+}
+
+extension MainViewController: MemoContentCellDelegate {
+    func bookmarkButtonTapped(cell: MemoContentCell) {
+        guard let indexPath = self.tableView.indexPath(for: cell) else { return }
+        print("Section: \(indexPath.section), row: \(indexPath.row)")
+        cell.bookmarkButton.isSelected.toggle()
+        cell.contentView.backgroundColor = cell.bookmarkButton.isSelected ? .systemGreen : .white
+        cell.lastDateLabel.textColor = cell.bookmarkButton.isSelected ? .white : .systemGray
+        cell.bookmarkButton.setImage(cell.bookmarkButton.isSelected ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"), for: .normal)
     }
 }

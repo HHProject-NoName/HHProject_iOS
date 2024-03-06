@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol MemoContentCellDelegate: AnyObject {
+    func bookmarkButtonTapped(cell: MemoContentCell)
+}
+
 final class MemoContentCell: UITableViewCell {
 
     static let identifier: String = "MemoContentCell"
+    
+    weak var delegate: MemoContentCellDelegate?
     
     private let cellView: UIView = {
         let view = UIView()
@@ -26,6 +32,7 @@ final class MemoContentCell: UITableViewCell {
     
     lazy var tagCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
@@ -37,8 +44,17 @@ final class MemoContentCell: UITableViewCell {
         return label
     }()
     
+    var bookmarkButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "star"), for: .normal)
+        button.tintColor = .black
+        button.isSelected = false
+        button.addTarget(self, action: #selector(bookmarkButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [tagCollectionView, lastDateLabel])
+        let stackView = UIStackView(arrangedSubviews: [tagCollectionView, lastDateLabel, bookmarkButton])
         stackView.axis = .horizontal
         stackView.spacing = 10
         return stackView
@@ -88,6 +104,10 @@ final class MemoContentCell: UITableViewCell {
         section.orthogonalScrollingBehavior = .continuous
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+    
+    @objc private func bookmarkButtonTapped(_ sender: UIButton) {
+        delegate?.bookmarkButtonTapped(cell: self)
     }
 }
 
