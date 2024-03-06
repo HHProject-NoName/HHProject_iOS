@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10237E5D2B9842E500252BF0 /* TagListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10237E5C2B9842E500252BF0 /* TagListCollectionView.swift */; };
+		10237E5F2B98503800252BF0 /* UtilsBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10237E5E2B98503800252BF0 /* UtilsBottomView.swift */; };
 		103DE6302B87323B008F0B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DE62F2B87323B008F0B8A /* AppDelegate.swift */; };
 		103DE6322B87323B008F0B8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DE6312B87323B008F0B8A /* SceneDelegate.swift */; };
 		103DE6342B87323B008F0B8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DE6332B87323B008F0B8A /* MainViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		10237E5C2B9842E500252BF0 /* TagListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListCollectionView.swift; sourceTree = "<group>"; };
+		10237E5E2B98503800252BF0 /* UtilsBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsBottomView.swift; sourceTree = "<group>"; };
 		103DE62C2B87323B008F0B8A /* nonameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nonameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		103DE62F2B87323B008F0B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		103DE6312B87323B008F0B8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				108279412B876E2100181DF6 /* TagListCell.swift */,
 				108BD6822B9460C3002EBC76 /* TagCell.swift */,
 				108BD6862B946B7F002EBC76 /* DefaultCell.swift */,
+				10237E5C2B9842E500252BF0 /* TagListCollectionView.swift */,
+				10237E5E2B98503800252BF0 /* UtilsBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,7 +234,9 @@
 				108BD68B2B946E70002EBC76 /* OpenSource.swift in Sources */,
 				108BD6892B946E24002EBC76 /* OpenSourceViewController.swift in Sources */,
 				108BD6852B946A27002EBC76 /* SettingViewController.swift in Sources */,
+				10237E5F2B98503800252BF0 /* UtilsBottomView.swift in Sources */,
 				108BD6832B9460C3002EBC76 /* TagCell.swift in Sources */,
+				10237E5D2B9842E500252BF0 /* TagListCollectionView.swift in Sources */,
 				103DE6322B87323B008F0B8A /* SceneDelegate.swift in Sources */,
 				103DE64C2B873C00008F0B8A /* Memo.swift in Sources */,
 			);

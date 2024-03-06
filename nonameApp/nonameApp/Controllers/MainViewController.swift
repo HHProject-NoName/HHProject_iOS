@@ -11,22 +11,22 @@ import SnapKit
 final class MainViewController: UIViewController {
     
     private var tableView: UITableView = UITableView()
-    private let touchUpKeyboardView: UIView = {
-        let view = UIView()
-        return view
-    }()
+    private let utilsBottomView = UtilsBottomView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigation()
         setupView()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
-        touchUpKeyboardView.addGestureRecognizer(tapGesture)
+        setupGesture()
     }
     
-    @objc func viewTapped() {
+    private func setupGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(utilsBottomViewTapped))
+        utilsBottomView.touchUpKeyboardView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func utilsBottomViewTapped() {
         let viewController = CustomKeyboardViewController()
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overFullScreen
@@ -39,20 +39,25 @@ final class MainViewController: UIViewController {
         navigationItem.rightBarButtonItem = setting
         navigationController?.navigationBar.tintColor = .black
     }
+    
     private func setupView() {
         view.addSubview(tableView)
-        view.addSubview(touchUpKeyboardView)
+        view.addSubview(utilsBottomView)
+        
         tableView.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview()
-            make.bottom.equalTo(touchUpKeyboardView.snp.top)
+            make.bottom.equalTo(utilsBottomView.snp.top)
         }
-        touchUpKeyboardView.snp.makeConstraints { make in
+        utilsBottomView.snp.makeConstraints { make in
             make.top.equalTo(tableView.snp.bottom)
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.height.equalTo(150)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide)
+            make.height.equalTo(110)
         }
+        
         setupTableView()
+        
+        utilsBottomView.bookmarkButton.addTarget(self, action: #selector(showBookmarkButtonTapped), for: .touchUpInside)
     }
     
     @objc private func settingButtonTapped() {
@@ -60,14 +65,15 @@ final class MainViewController: UIViewController {
         self.navigationController?.pushViewController(settingViewController, animated: true)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
-    
     private func setupTableView() {
         tableView.dataSource = self
         tableView.allowsMultipleSelection = true
         tableView.register(MemoContentCell.self, forCellReuseIdentifier: MemoContentCell.identifier)
+    }
+    
+    @objc private func showBookmarkButtonTapped(_ sender: UIButton) {
+        tableView.reloadData()
+        print("tableView reload")
     }
 }
 
